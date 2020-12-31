@@ -10,7 +10,9 @@ void getRole() {
       break;
     case 2:
       role = "crewmate";
-      //run the crewmate command
+      displayCrewmateOptions();
       break;
   }
+
+  std::cout << "Your role: " << role << '\n' << std::endl;
 }

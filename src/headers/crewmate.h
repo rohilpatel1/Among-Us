@@ -3,4 +3,6 @@
 #include <string>
 #include <vector>
 
+#include "../defaults.hpp"
+
 void displayCrewmateOptions();
