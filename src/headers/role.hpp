@@ -7,18 +7,21 @@
 #include "crewmate.hpp"
 
 void getRole() {
-  int randomNumber = randint(2, 2);
+  int randomNumber = randint(3, 5);
 
   switch (randomNumber) {
     case 1:
       role = "imposter";
-      //run the imposter command panel
+      std::cout << "Your are a Crewmate \n" << std::endl;
       break;
+
     case 2:
       role = "crewmate";
+      std::cout << "Your are an Imposter \n" << std::endl;
       displayCrewmateOptions();
       break;
-  }
 
-  std::cout << "Your role: " << role << '\n' << std::endl;
+    default:
+      Error.error("Could not place user as either crewmate or imposter");
+  }
 }
