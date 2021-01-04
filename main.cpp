@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-#include "src/headers/role.h"
+#include "src/headers/role.hpp"
 
 int main() {
   getRole();

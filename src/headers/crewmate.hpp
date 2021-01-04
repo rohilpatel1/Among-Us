@@ -1,4 +1,9 @@
-#include "../headers/crewmate.h"
+#pragma once
+#include <iostream>
+#include <string>
+#include <vector>
+
+#include "../defaults.hpp"
 
 void displayCrewmateOptions() {
   int userInput;
@@ -19,9 +24,15 @@ void displayCrewmateOptions() {
   switch(userInput) {
     case 1:
       //run task function
+      std::cout << "e";
+      break;
     case 2:
       //run security function
+      std::cout << "e";
+      break;
     case 3:
       //run meeting, if applicable
+      std::cout << "e";
+      break;
   }
 }

@@ -1,3 +1,4 @@
+#pragma once
 #ifndef RANDOMNUM_H
 #define RANDOMNUM_H
 #include <random>

@@ -1,7 +1,13 @@
-#include "../headers/role.h"
+#pragma once
+#include <iostream>
+#include <iostream>
+
+#include "../helpers/random.hpp"
+#include "../defaults.hpp"
+#include "crewmate.hpp"
 
 void getRole() {
-  int randomNumber = randint(1, 2);
+  int randomNumber = randint(2, 2);
 
   switch (randomNumber) {
     case 1:
