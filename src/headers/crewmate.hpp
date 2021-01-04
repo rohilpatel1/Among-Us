@@ -4,6 +4,7 @@
 #include <vector>
 
 #include "../defaults.hpp"
+#include "../helpers/errors.hpp"
 
 void displayCrewmateOptions() {
   int userInput;
@@ -34,5 +35,8 @@ void displayCrewmateOptions() {
       //run meeting, if applicable
       std::cout << "e";
       break;
+    default:
+      Error.error(std::to_string(userInput) + " is not a valid input character");
+      displayCrewmateOptions();
   }
 }

@@ -7,17 +7,17 @@
 #include "crewmate.hpp"
 
 void getRole() {
-  int randomNumber = randint(3, 5);
+  int randomNumber = randint(1, 2);
 
   switch (randomNumber) {
     case 1:
       role = "imposter";
-      std::cout << "Your are a Crewmate \n" << std::endl;
+      std::cout << "Your are an Imposter \n" << std::endl;
       break;
 
     case 2:
       role = "crewmate";
-      std::cout << "Your are an Imposter \n" << std::endl;
+      std::cout << "Your are a Crewmate \n" << std::endl;
       displayCrewmateOptions();
       break;
 
