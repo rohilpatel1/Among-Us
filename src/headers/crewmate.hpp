@@ -4,7 +4,17 @@
 #include <vector>
 
 #include "../defaults.hpp"
-#include "../helpers/errors.hpp"
+#include "../helpers/logger.hpp"
+
+class Crewmate {
+	public:
+	  Crewmate(){};
+	  
+	  void doTask() {
+	  	int completedTask = randnum(1, 2);
+	  	logger.print(completedTask);
+	  }
+};
 
 void displayCrewmateOptions() {
   int userInput;
@@ -21,11 +31,12 @@ void displayCrewmateOptions() {
   std::cout << options << std::endl;
 
   std::cin >> userInput;
-
+  
+  Crewmate crewmate;
   switch(userInput) {
     case 1:
       //run task function
-      std::cout << "e";
+      crewmate.doTask();
       break;
     case 2:
       //run security function
@@ -36,7 +47,7 @@ void displayCrewmateOptions() {
       std::cout << "e";
       break;
     default:
-      Error.error(std::to_string(userInput) + " is not a valid input character");
+      logger.error(std::to_string(userInput) + " is not a valid input character");
       displayCrewmateOptions();
   }
 }

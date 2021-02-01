@@ -5,6 +5,7 @@
 #include "../helpers/random.hpp"
 #include "../defaults.hpp"
 #include "crewmate.hpp"
+#include "../helpers/logger.hpp"
 
 void getRole() {
   int randomNumber = randint(1, 2);
@@ -22,6 +23,6 @@ void getRole() {
       break;
 
     default:
-      Error.error("Could not place user as either crewmate or imposter");
+      logger.error("Could not place user as either crewmate or imposter");
   }
 }
